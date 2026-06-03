@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- HTML文書であることを宣言 -->
+
+<html lang="ja"> <!-- 日本語ページとして設定 -->
+
+<head> <!-- ページ設定の開始 -->
+
+  <meta charset="UTF-8"> <!-- 日本語の文字化けを防ぐ -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- スマホ画面に対応させる -->
+
+  <title>欠席管理カレンダー</title> <!-- ブラウザのタブ名 -->
+
+  <link rel="stylesheet" href="style.css"> <!-- CSSファイルを読み込む -->
+
+  <script src="script.js" defer></script> <!-- JavaScriptファイルを読み込む -->
+
+</head> <!-- ページ設定の終了 -->
+
+<body> <!-- 画面に表示する内容の開始 -->
+
+  <h1>欠席管理カレンダー</h1> <!-- タイトル -->
+
+  <div class="controls"> <!-- 操作ボタン全体 -->
+
+    <button id="editButton">授業名編集モード：OFF</button> <!-- 授業名編集モード切り替えボタン -->
+
+    <button id="addPeriodButton" class="add-button">＋ 時限を追加</button> <!-- 時限追加ボタン -->
+
+    <button id="deletePeriodButton" class="delete-button">－ 時限を削除</button> <!-- 時限削除ボタン -->
+
+    <button id="resetAbsenceButton" class="danger-button">欠席色を全リセット</button> <!-- 欠席色を全てリセットするボタン -->
+
+    <button id="resetSubjectButton" class="danger-button">授業名を全リセット</button> <!-- 授業名を全てリセットするボタン -->
+
+  </div> <!-- 操作ボタン全体の終了 -->
+
+  <div class="mode-text" id="modeText">通常モード：クリックすると欠席回数の色が変わります</div> <!-- 現在のモード説明 -->
+
+  <div class="legend"> <!-- 色の説明欄 -->
+
+    <div class="legend-item"><div class="color-box state-none"></div>未設定</div> <!-- 未設定の色説明 -->
+
+    <div class="legend-item"><div class="color-box state-1"></div>欠席1回</div> <!-- 欠席1回の色説明 -->
+
+    <div class="legend-item"><div class="color-box state-2"></div>欠席2回</div> <!-- 欠席2回の色説明 -->
+
+    <div class="legend-item"><div class="color-box state-3"></div>欠席3回</div> <!-- 欠席3回の色説明 -->
+
+    <div class="legend-item"><div class="color-box state-4"></div>欠席4回</div> <!-- 欠席4回の色説明 -->
+
+    <div class="legend-item"><div class="color-box state-5"></div>欠席5回</div> <!-- 欠席5回の色説明 -->
+
+  </div> <!-- 色の説明欄の終了 -->
+
+  <div class="calendar" id="calendar"></div> <!-- JavaScriptでカレンダーを表示する場所 -->
+
+</body> <!-- 画面に表示する内容の終了 -->
+
+</html> <!-- HTML文書の終了 -->
